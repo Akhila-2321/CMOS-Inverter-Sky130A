@@ -128,7 +128,8 @@ The PMOS and NMOS transistor structures are integrated with the input, output, p
 
 **Output 4: CMOS Inverter Physical Layout**
 
-<img width="960" alt="CMOS Inverter Physical Layout" src="images/magic_layout.png" />
+<img width="960" height="540" alt="CMOS Inverter Physical Layout" src="https://github.com/user-attachments/assets/b153520b-b166-4f47-a100-8af2d8e5fde3" />
+
 
 ---
 

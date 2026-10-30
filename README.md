@@ -40,7 +40,8 @@ The circuit contains one PMOS transistor and one NMOS transistor. Their gates ar
 
 **Output 1: CMOS Inverter Schematic**
 
-![CMOS Inverter Schematic](01_cmos_inverter_schematic.png)
+<img width="960" height="540" alt="cmos_inverter_schematic png" src="https://github.com/user-attachments/assets/dd50e9e3-a468-4c7f-9ff2-34a9c5c1e707" />
+
 
 ### 2. Testbench Creation
 
@@ -56,7 +57,8 @@ The input signal is applied to the inverter, and the output response is observed
 
 **Output 2: CMOS Inverter Testbench**
 
-![CMOS Inverter Testbench](02_inverter_testbench.png)
+<img width="960" height="540" alt="inverter_testbench png" src="https://github.com/user-attachments/assets/6b0c47c6-7ad7-4575-ad34-860d30d9671f" />
+
 
 ### 3. Transient Simulation Using NGSpice
 
@@ -72,7 +74,8 @@ Transient analysis was performed to observe how the output changes with respect 
 
 **Output 3: NGSpice Transient Simulation**
 
-![Transient Simulation Waveform](03_ngspice_transient_waveform.png)
+<img width="960" height="540" alt="ngspice_transient_waveform png" src="https://github.com/user-attachments/assets/d7b3cd2a-cbe7-467e-955e-f28e7bde038f" />
+
 
 ## Results
 

@@ -1,115 +1,114 @@
+# CMOS Inverter Design Using SKY130A
 
-# CMOS Inverter Design using SKY130A PDK
+## Project Overview
 
-## 1. Project Overview
+This project focuses on the design and simulation of a CMOS Inverter using the SKY130A technology. The design is created using Xschem, and circuit simulation is performed using NGSpice.
 
-This project focuses on the design and simulation of a CMOS inverter using the SKY130A Process Design Kit (PDK).
+A CMOS inverter is a basic digital logic circuit that produces the complement of its input signal. It consists of one PMOS transistor and one NMOS transistor connected together.
 
-The CMOS inverter is designed using PMOS and NMOS transistors. The schematic is created using Xschem, and transient simulation is performed using ngspice to verify the inverter functionality. The physical layout is being implemented using Magic VLSI.
+The main objective of this project is to understand CMOS inverter circuit design, prepare the schematic and testbench, and verify its operation through transient simulation.
 
-## 2. Objectives
+## Tools and Technologies Used
 
-- To design a CMOS inverter using PMOS and NMOS transistors.
-- To create the circuit schematic using Xschem.
-- To perform transient simulation using ngspice.
-- To analyse the input and output voltage waveforms.
-- To implement the physical layout using Magic VLSI.
-- To work with the SKY130A technology library.
+- **Xschem** – Used for drawing the CMOS inverter schematic and creating the testbench.
+- **NGSpice** – Used for circuit simulation and waveform analysis.
+- **SKY130A PDK** – Open-source 130 nm process design kit used for the CMOS design.
 
-## 3. Tools and Technologies Used
+## CMOS Inverter Theory
 
-| Tool | Purpose |
-|---|---|
-| Xschem | Schematic Design |
-| ngspice | Circuit Simulation |
-| Magic VLSI | Physical Layout Design |
-| SKY130A PDK | Technology Library |
-| Ubuntu Linux | Development Environment |
+A CMOS inverter consists of two MOSFETs:
 
-## 4. CMOS Inverter Schematic Design
+- PMOS transistor connected to VDD.
+- NMOS transistor connected to GND.
+- Both transistor gates are connected to the input.
+- Both transistor drains are connected to the output.
 
-The CMOS inverter consists of two MOS transistors:
+### Working Principle
 
-- PMOS transistor (M1) connected to VDD.
-- NMOS transistor (M2) connected to VSS.
-- Both gates are connected to the input (IN).
-- Both drains are connected to the output (OUT).
+1. When the input is LOW (0 V), the PMOS transistor turns ON and the NMOS transistor turns OFF. Therefore, the output becomes HIGH (1.8 V).
+2. When the input is HIGH (1.8 V), the PMOS transistor turns OFF and the NMOS transistor turns ON. Therefore, the output becomes LOW (0 V).
 
-The supply voltage used is 1.8V.
+Thus, the output is always the opposite of the input.
 
-### Schematic Output
+## Design and Simulation Steps
 
-![CMOS Inverter Schematic](images/cmos_schematic.png)
+### 1. CMOS Inverter Schematic Design
 
-## 5. Testbench Design
+The CMOS inverter schematic was created using Xschem.
 
-A testbench is created in Xschem to verify the functionality of the CMOS inverter.
+The circuit contains one PMOS transistor and one NMOS transistor. Their gates are connected to the input, while their drains are connected to the output. The PMOS source is connected to VDD, and the NMOS source is connected to GND.
 
-Simulation parameters:
+**Output 1: CMOS Inverter Schematic**
 
-- Supply Voltage: 1.8V
-- Input Signal: Pulse/Ramp Signal
-- Analysis: Transient Analysis
-- Simulation Tool: ngspice
+![CMOS Inverter Schematic](01_cmos_inverter_schematic.png)
 
-### Testbench Output
+### 2. Testbench Creation
 
-![CMOS Inverter Testbench](images/testbench.png)
+A testbench was created in Xschem to verify the functionality of the CMOS inverter.
 
-## 6. Transient Simulation using ngspice
+The testbench includes:
+- DC supply voltage of 1.8 V.
+- Input pulse signal.
+- CMOS inverter circuit.
+- Simulation setup for transient analysis.
 
-Transient analysis is performed using ngspice to observe the CMOS inverter response.
+The input signal is applied to the inverter, and the output response is observed during simulation.
 
-### Simulation Results
+**Output 2: CMOS Inverter Testbench**
 
-- When the input voltage is LOW, the output voltage is HIGH.
-- When the input voltage is HIGH, the output voltage is LOW.
-- The output waveform represents the logical NOT operation of the input.
+![CMOS Inverter Testbench](02_inverter_testbench.png)
 
-### Simulation Waveform
+### 3. Transient Simulation Using NGSpice
 
-![ngspice Simulation Output](images/simulation_output.png)
+The designed testbench was simulated using NGSpice.
 
-## 7. Physical Layout using Magic VLSI
+Transient analysis was performed to observe how the output changes with respect to the input signal.
 
-The physical layout of the CMOS inverter is being implemented using Magic VLSI with the SKY130A PDK.
+**Simulation Observations:**
 
-The layout includes:
+- When the input is LOW, the output is HIGH.
+- When the input is HIGH, the output is LOW.
+- The output waveform is the logical complement of the input waveform.
 
-- PMOS and NMOS transistor structures.
-- Input connection (IN).
-- Output connection (OUT).
-- Power supply connection (VDD).
-- Ground connection (VSS).
+**Output 3: NGSpice Transient Simulation**
 
-### Initial Layout Output
+![Transient Simulation Waveform](03_ngspice_transient_waveform.png)
 
-![Magic CMOS Inverter Layout](images/magic_layout.png)
+## Results
 
-## 8. Project Progress
+The CMOS inverter was successfully designed and simulated.
+
+The transient waveform verifies the basic inverter operation. The output signal changes in the opposite direction to the input signal, confirming the expected functionality of the CMOS inverter.
+
+## Current Project Status
 
 | Task | Status |
 |---|---|
-| CMOS Inverter Schematic | Completed |
-| Testbench Design | Completed |
-| ngspice Transient Simulation | Completed |
-| Initial Magic Layout | In Progress |
-| DRC Verification | Pending |
-| Layout Extraction | Pending |
-| LVS Verification | Pending |
+| CMOS inverter schematic design | Completed |
+| Symbol creation | Completed |
+| Testbench creation | Completed |
+| NGSpice transient simulation | Completed |
+| Layout design using Magic | Pending |
+| DRC verification | Pending |
+| LVS verification | Pending |
 
-## 9. Conclusion
+## Future Work
 
-The CMOS inverter schematic was successfully designed using Xschem, and its transient response was verified using ngspice.
+- Create the CMOS inverter layout using Magic.
+- Perform Design Rule Check (DRC).
+- Perform Layout Versus Schematic (LVS) verification.
+- Complete layout extraction and post-layout simulation.
 
-The simulation confirms the expected inverter operation, where the output voltage is the logical complement of the input voltage.
+## Conclusion
 
-The physical layout implementation using Magic VLSI and SKY130A PDK is currently in progress. DRC and LVS verification will be performed in the next stages.
+This project helped in understanding the basic design and working principle of a CMOS inverter using SKY130A technology. The schematic was designed using Xschem, and its functionality was verified through transient simulation using NGSpice. The simulation results confirm the expected inverter operation.
 
-## 10. Author
+## Author
 
-**Name:** Anugu Akhila
+**Anugu Akhila**
 
-**Project Title:** CMOS Inverter Design using SKY130A PDK
+## References
 
-**Domain:** VLSI Design and Physical Verification
+- [SkyWater SKY130 PDK](https://github.com/google/skywater-pdk)
+- [Xschem](https://xschem.sourceforge.io/)
+- [NGSpice](https://ngspice.sourceforge.io/)

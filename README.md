@@ -147,7 +147,7 @@ The DRC verification was successfully completed with **zero violations**.
 
 **DRC Result: 0 Errors**
 
-<img width="960" alt="DRC Verification Result" src="images/drc_result.png" />
+
 
 **Status: Completed – 0 DRC Violations.**
 

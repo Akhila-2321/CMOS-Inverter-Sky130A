@@ -138,7 +138,7 @@ The PMOS and NMOS transistor structures are integrated with the input, output, p
 Design Rule Check was performed using Magic VLSI with the SKY130A technology rules to verify the physical layout against fabrication constraints.
 
 The layout was checked for spacing, width, enclosure and other technology-specific design rule violations.
-<img width="851" height="509" alt="CMOS Inverter Physical Layout" src="https://github.com/user-attachments/assets/3754e7ba-f354-4cb1-b86f-485176d97eaa" />
+
 
 
 ### DRC Verification Result
@@ -171,7 +171,6 @@ The objective is to verify that the physical layout maintains the intended trans
 
 **LVS Verification Result**
 
-<img width="960" alt="LVS Verification Result" src="images/lvs_result.png" />
 
 **Status: Pending.**
 
@@ -185,7 +184,7 @@ The simulation results will be compared with the pre-layout waveforms to study t
 
 **Post-Layout Simulation**
 
-<img width="960" alt="Post-Layout Simulation" src="images/postlayout_simulation.png" />
+
 
 **Status: Pending.**
 
